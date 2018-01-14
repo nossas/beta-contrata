@@ -28,7 +28,7 @@ let EditForm = ({ dispatch, id, text, chave, editing }) => {
                     />
                 </FormGroup>
                 <Button type="submit" color="success">
-                    <i className="fa fa-check-square" aria-hidden="true"></i>
+                    <i className="fa fa-check-square" aria-hidden="true"></i> Salvar
                 </Button>
             </Form>
         </div>
