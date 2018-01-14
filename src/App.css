@@ -23,11 +23,9 @@ body{
     margin-top: 30px;
 }
 
-.search-form{
-    margin: auto;
-}
 
 .search-input{
+    margin: auto;
     width: 75%;
     margin: 5px 10em;
     margin-bottom: 10px;
@@ -45,3 +43,39 @@ body{
 input{
     width: 100%;
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .App-header{
+    height: 50px;
+    padding: 0;
+  }
+
+  .App-title{
+      font-size: 30px;
+  }
+
+  .search-input{
+    margin: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .list-group{
+    align-items: center;
+  }
+
+  .list-group-item{
+    margin: 5px;
+    width: 15em;
+  }
+  
+}
+
