@@ -11,7 +11,7 @@ let EditLink = ({dispatch, id}) => {
                 dispatch(changeEditing(id))
             }}
         >
-            Edit
+            <span className="edit-icon"><i className="fa fa-pencil-square fa-lg" aria-hidden="true"></i></span>
         </a>
     )
 }

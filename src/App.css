@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+    background-color: #ecf0f1;
+}
+
+.App{
+    background-color: #ecf0f1;
+}
+  
+.App-header {
+    text-align: center;
+    background-color: #ecf0f1;
+    height: 200px;
+    padding: 30px;
+    color: white;
+}
+
+.App-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    color: #e82e5b;
+    margin-top: 30px;
+}
+
+.search-form{
+    margin: auto;
+}
+
+.search-input{
+    width: 75%;
+    margin: 5px 10em;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.list-group-item{
+    margin: 3px 10em;
+}
+
+.edit-icon{
+    float: right;
+    color: #e82e5b;
+}
+input{
+    width: 100%;
+}

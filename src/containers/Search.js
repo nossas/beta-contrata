@@ -1,31 +1,29 @@
 import React from 'react'
+import { Button } from 'reactstrap';
 import { filterMsg } from '../actions'
 import { connect } from 'react-redux'
 
 let Search = ({ dispatch }) => {
     let input
     return (
-        <div>
+        <div className="search-form">
             <form onSubmit={e => {
                 e.preventDefault()
                 if (!input.value.trim()) {
                     return
                 }
-                dispatch(filterMsg(input.value))
+                //dispatch(filterMsg(input.value))
                 //input.value = ''
             }}>
-                <input
+                <input className="search-input"
                     placeholder="Pesquisar mensagem..."
                     ref={node => {
                         input = node
                     }}
                     onChange={() => {
                         dispatch(filterMsg(input.value))
-                    }}
+                    }}                   
                 />
-                <button type="submit">
-                    Search
-                </button>
             </form>
         </div>
     )

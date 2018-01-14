@@ -1,16 +1,17 @@
 import React from 'react'
+import {ListGroup} from 'reactstrap'
 import PropTypes from 'prop-types'
-import Message from './Message';
+import Message from './Message'
 
 const MessageList = ({ messages }) => (
-    <ul>
+    <ListGroup >
         {messages.map((msg, index) =>
             <Message
                 key={index}
                 {...msg}
             />
         )}
-    </ul>
+    </ListGroup >
 )
 
 MessageList.propTypes = {
