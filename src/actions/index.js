@@ -5,8 +5,15 @@ export const filterMsg = (filterText) => ({
 })
 
 //edit msg: receive the key and value from the editMsg form
-export const editMsg = (key, text) => ({
+export const editMsg = (id, chave, text, editing) => ({
     type: 'EDIT_MSG',
-    key,
-    text
+    id,
+    chave,
+    text, 
+    editing
+})
+
+export const changeEditing = (id) => ({
+    type: 'CHANGE_EDITING', 
+    id
 })

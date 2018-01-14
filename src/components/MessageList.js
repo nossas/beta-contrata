@@ -15,7 +15,7 @@ const MessageList = ({ messages }) => (
 
 MessageList.propTypes = {
     messages: PropTypes.arrayOf(PropTypes.shape({
-        key: PropTypes.string.isRequired,
+        chave: PropTypes.string.isRequired, //OBS
         text: PropTypes.string.isRequired
     }).isRequired).isRequired,
 }

@@ -12,13 +12,22 @@ const filterText = (state = '', action) => {
 const messages = (state = [], action) => {
     switch (action.type) {
         case 'EDIT_MSG':
-            return [
-                ...state,
-                {
-                    key: action.key,
-                    text: action.text
-                }
-            ]
+            return state.map(message =>
+                (message.id === action.id)
+                    ? {
+                        id: action.id,
+                        chave: action.chave,
+                        text: action.text,
+                        editing: action.editing
+                    }
+                    : message
+            )
+        case 'CHANGE_EDITING':
+            return state.map(message =>
+                (message.id === action.id)
+                    ? { ...message, editing: !message.editing }
+                    : message
+            )
         default:
             return state
     }

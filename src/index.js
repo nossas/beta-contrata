@@ -7,10 +7,14 @@ import reducer from './reducers'
 import messages from './messages'
 
 const values = [];
+var id = 0;
 for (var key in messages) {
+    id++;
     var objMsg = {};
-    objMsg.key = key;
-    objMsg.text = String(messages[key])
+    objMsg.chave = key;
+    objMsg.text = String(messages[key]);
+    objMsg.id = id;
+    objMsg.editing = false;
     values.push(objMsg);
 }
 //console.log(values);
@@ -22,7 +26,7 @@ const initialState = {
 
 const store = createStore(reducer, initialState)
 
-console.log(store.getState())
+//console.log(store.getState())
 
 render(
     <Provider store={store}>
