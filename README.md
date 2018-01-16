@@ -4,6 +4,7 @@
 
 > 💪♀💜 Uma robô Feminista até o último código
 
+
 ## Run the project local
 
 
@@ -20,6 +21,21 @@ $ yarn
 ```
 
 
+**2 -** Start development mode:
+
+```sh
+$ yarn start
+```
+
+Go to: [localhost:8080](http://localhost:8080)
+
+
+## Automatic Tasks
+
+- `$ yarn start`: Watch the files to build and start a static server.
+- `$ yarn build`: Compile and minify public/bundle.js.
+
+
 ## Contributing
 
 Find on our [issues](https://github.com/simoneas02/beta-contrata/issues/) the next steps of the project ;)  
@@ -33,4 +49,4 @@ See [Releases](https://github.com/simoneas02/beta-contrata/releases) for detaile
 
 ## License
 
-[GNU GENERAL PUBLIC LICENSE](https://github.com/simoneas02/beta-contrata/blob/vem-de-chat/LICENSE.md) © [Beta.org](https://www.beta.org.br/)
+[GNU - GENERAL PUBLIC LICENSE](https://github.com/simoneas02/beta-contrata/blob/vem-de-chat/LICENSE) © [Beta.org](https://www.beta.org.br/)
