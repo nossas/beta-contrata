@@ -1,0 +1,1 @@
+export const DELETE_MESSAGE = 'DELETE_MESSAGE';
