@@ -49,4 +49,4 @@ See [Releases](https://github.com/simoneas02/beta-contrata/releases) for detaile
 
 ## License
 
-[GNU - GENERAL PUBLIC LICENSE](https://github.com/simoneas02/beta-contrata/blob/vem-de-chat/LICENSE) © [Beta.org](https://www.beta.org.br/)
+[GNU v3](https://github.com/simoneas02/beta-contrata/blob/vem-de-chat/LICENSE) © [Beta.org](https://www.beta.org.br/)
