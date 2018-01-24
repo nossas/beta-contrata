@@ -3,15 +3,18 @@ import { connect } from 'react-redux';
 
 import PropTypes from 'prop-types';
 import Message from '../components/Message';
+import * as Actions from '../actions';
 
-const MessagesContainer = ({ messages }) => (
+const MessagesContainer = ({ messages, deleteMessage }) => (
   <ul>
-    {console.log(messages)}
-    {messages.map(msg =>
-      <Message key={msg.id}>
-        {msg.message}
+    { messages.map(msg =>
+      <Message 
+        key={ msg.id } 
+        onDeleteClick={ () => deleteMessage(msg.id) }
+      >
+        { msg.message }
       </Message>
-    )}
+    ) }
   </ul>
 );
 
@@ -19,5 +22,4 @@ const mapStateToProps = ({ messages }) => {
   return { messages: messages.list };
 };
 
-
-export default connect(mapStateToProps)(MessagesContainer);
+export default connect(mapStateToProps, { ...Actions })(MessagesContainer);
