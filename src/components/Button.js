@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Button = ({onClick, children, isActive, icon}) => (
 
   <button 
-    onClick={ isActive ? onClick : null }
-    style={{ textDecoration: !isActive ? 'btn--inactive' : 'none' }}
+    onClick={ onClick }
+    style={{ disabled: !isActive ? true : false }}
   >
     { children }
     { icon ? <img className="btn__icon" src={icon}/> : null }
