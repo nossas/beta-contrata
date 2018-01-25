@@ -8,13 +8,15 @@ const initialState = {
 };
 
 function deleteMessage(state, action) {
-  const messageIndex = Object.keys(state.items).indexOf(action.id);
-  if (messageIndex >= 0) {
-    state.items.splice(messageIndex, 1);
+  let items =  state.items;
+  for (let key in messages) {
+    if (key == action.id ) {
+      delete items[key];
+    }
   }
   return {
     ...state,
-    items: state.items
+    items
   };
 }
 

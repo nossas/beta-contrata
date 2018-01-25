@@ -9,6 +9,15 @@ describe('actions', () => {
       id
     }
     expect(actions.setCurrentMessage(id)).toEqual(expectedAction);
+  });
+
+  it('should create action to delete a message', () => {
+    const id = 'EMOJI_NO_OPINION';
+    const expectedAction = {
+      type: types.SET_CURRENT_MESSAGE,
+      id
+    }
+    expect(actions.setCurrentMessage(id)).toEqual(expectedAction);
   })
   
   it('should create an action to edit key and message', () => {

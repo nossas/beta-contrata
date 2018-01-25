@@ -14,7 +14,7 @@ class App extends React.Component {
   }
   
   removeMessage = event => {
-    const id = event.target.dataset.id;
+    const id = event.target.dataset.message_id;
     this.props.messageAction.deleteMessage(id);
   }
 
@@ -42,7 +42,8 @@ class App extends React.Component {
         <div key={index}>
           <Card item={this.props.messages.items[key]}
                 id={key}
-                setCurrentMessage={this.setCurrentMessage} />
+                setCurrentMessage={this.setCurrentMessage}
+                removeMessage={this.removeMessage} />
         </div>
       );
     });

@@ -54,5 +54,17 @@ describe('reducer', () => {
     };
     expect(reducer(initialState, fakeAction)).toEqual(state);
   });
-  
+
+  it('should the delete message', () => {
+    const messageId = Object.keys(messages)[2];
+    let messagesDelete = { ...messages };
+    delete messagesDelete[messageId];
+    expect(reducer(initialState, {
+      type: types.DELETE_MESSAGE,
+      id: messageId 
+    })).toEqual({
+      ...initialState,
+      items: messagesDelete
+    });
+  });
 });
