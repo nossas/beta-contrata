@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import PropTypes from 'prop-types';
 import Message from '../components/Message';
 import * as Actions from '../actions';
 

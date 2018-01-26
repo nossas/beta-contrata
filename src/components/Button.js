@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Button = ({onClick, children, isActive, icon}) => (
 
@@ -12,10 +11,5 @@ const Button = ({onClick, children, isActive, icon}) => (
   </button>
 
 );
-
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  isActive: PropTypes.bool.isRequired,
-};
 
 export default Button;
