@@ -42,8 +42,32 @@ function editMessage(state, action) {
   };
 }
 
+function searchMessage(state, action) {
+  let resultFound = [];
+  let term = action.term.toLowerCase();
+  for (let key in messages) {
+    let normalize = messages[key].toLowerCase();
+    if(normalize.search(term) >= 0) {
+      resultFound.push(messages[key]);
+    }
+  }
+  return {
+    ...state,
+    items: resultFound
+  }
+}
+
+function clearSearch(state, action) {
+  return {
+    ...state,
+    items: state.items
+  }
+}
+
 export default createReducer(initialState, {
   [ACTIONS.DELETE_MESSAGE]: deleteMessage,
   [ACTIONS.EDIT_MESSAGE]: editMessage,
-  [ACTIONS.SET_CURRENT_MESSAGE]: setCurrentMessage    
+  [ACTIONS.SET_CURRENT_MESSAGE]: setCurrentMessage,
+  [ACTIONS.SEARCH_MESSAGE]: searchMessage,
+  [ACTIONS.CLEAR_SEARCH]: clearSearch 
 });

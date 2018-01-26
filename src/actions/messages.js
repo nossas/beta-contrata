@@ -20,3 +20,16 @@ export function editMessage(data) {
     data
   };
 }
+
+export function searchMessage(term) {
+  return {
+    type: actions.SEARCH_MESSAGE,
+    term
+  };
+}
+
+export function clearSearch() {
+  return {
+    type: actions.CLEAR_SEARCH
+  };
+}

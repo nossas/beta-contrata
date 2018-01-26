@@ -7,6 +7,7 @@ import * as messageActions from '../../actions/messages';
 
 import Card from '../../components/card';
 import MessageForm from '../../components/messageform';
+import Search from '../../components/search';
 
 class App extends React.Component {
   constructor() {
@@ -34,6 +35,12 @@ class App extends React.Component {
     const id = event.target.dataset.message_id;
     this.props.messageAction.setCurrentMessage(id);
   }
+
+  searchMessage = (term) => {
+    term.length >= 0
+      ? this.props.messageAction.searchMessage(term)
+      : this.props.messageAction.clearSearch();
+  }
  
   listMessages = () => {
     const messages = this.props.messages.items;
@@ -53,6 +60,9 @@ class App extends React.Component {
     const { currentItem, items } = this.props.messages;
     return (
       <div>
+        <div>
+          <Search searchMessage={this.searchMessage} />
+        </div>  
         {this.listMessages()}
         {currentItem 
           ? <MessageForm
