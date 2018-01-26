@@ -62,7 +62,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header />
-        <Search searchMessage={this.searchMessage} />
+        <Search searchMessage={this.searchMessage} className="search-message" />
         {this.listMessages()}
         {currentItem 
           ? <MessageForm

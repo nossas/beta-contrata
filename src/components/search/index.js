@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 
 function Search({ searchMessage, className }) {
   return (
-    <label>
-      <input type="text"
-             onChange={(e) => searchMessage(e.target.value)}
-             className={className}
-             name="search" />
-    </label>
+    <div className={className}>
+      <label className="wrapper">
+        <input type="text"
+               onChange={(e) => searchMessage(e.target.value)}
+               className='input'
+               name="search" />      
+        <i className="fa fa-search icon" aria-hidden="true" />      
+      </label>
+    </div>
   );
 }
 
