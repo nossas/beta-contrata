@@ -13,6 +13,8 @@ let MessageSearch = ({dispatch}) => {
           className='search__input' 
           type='search' 
           placeholder='Vê aqui o que tá rolando'
+          // aqui não consegui retornar o valor do input, rertorna um erro que parou de funcionar o botão deletar :)
+          // se fosse no react normal eu usaria pegaria com o this.refs e atualizaria o status, mas no redux não consegui retornar
           /*ref={node => {inputSearch = node}}
           onChange={ dispatch(searchMessage(inputSearch.value.trim().toLowerCase())) }*/                
         />
