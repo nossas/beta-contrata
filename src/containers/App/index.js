@@ -8,6 +8,7 @@ import * as messageActions from '../../actions/messages';
 import Card from '../../components/card';
 import MessageForm from '../../components/messageform';
 import Search from '../../components/search';
+import Header from '../../components/header';
 
 class App extends React.Component {
   constructor() {
@@ -59,10 +60,9 @@ class App extends React.Component {
   render() {
     const { currentItem, items } = this.props.messages;
     return (
-      <div>
-        <div>
-          <Search searchMessage={this.searchMessage} />
-        </div>  
+      <div className="container">
+        <Header />
+        <Search searchMessage={this.searchMessage} />
         {this.listMessages()}
         {currentItem 
           ? <MessageForm
