@@ -9,6 +9,9 @@ class Card extends React.Component {
         <a href="javascript:void(0)"
           data-message_id={this.props.id}
           onClick={this.props.setCurrentMessage}>Editar</a>
+        <a href="javascript:void(0)"
+          data-message_id={this.props.id}
+          onClick={this.props.removeMessage}>x</a>  
       </div>
     );
   }
