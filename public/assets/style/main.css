@@ -5,7 +5,7 @@
 :root {
   --primary-color: #dc2c5d;
   --secondary-color: #56195b;
-  --dev-color: red;
+  /*--dev-color: red;*/
   --space-default: 20px;
 }
 
@@ -68,12 +68,12 @@ html, body, #root, .container {
 
 .header__img {
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-default);
 }
 
 @media(min-width: 700px) {
   .header__img {
-    margin: 0 20px 0 0;
+    margin: 0 var(--space-default) 0 0;
     width: 100px;
   }
 }
@@ -84,7 +84,7 @@ html, body, #root, .container {
 
 .search {
   border: 1px solid var(--dev-color);
-  margin: var(--space-default);
+  margin: var(--space-default) auto 0 auto;
   padding: var(--space-default);
   max-width: 600px;
   width: 100%
@@ -115,6 +115,48 @@ html, body, #root, .container {
 
 
 /************************************************/
+/* Chat */
+
+.chat-list {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid var(--dev-color);
+}
+
+.chat-list__item {
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid var(--primary-color);
+  background: #c59ca8;
+  margin: var(--space-default) 0;
+  margin-left: auto;
+  padding: calc(var(--space-default) / 2);
+  border-radius: 20px 20px 0 20px;
+  list-style: none;
+  animation: show .5s ease;
+}
+
+.chat-list__item:nth-child(2n+0) {
+  background: #efe7e7;
+  border-radius: 0 20px 20px 20px;
+  margin: 0;
+  margin-right: auto;
+}
+
+@-webkit-keyframes show {
+  0% { -webkit-transform: translateX(-100%); transform: translateX(-100%) }
+100% { -webkit-transform: translateX(0px); transform: translateX(0px) }
+}
+
+@keyframes show {
+  0% { -webkit-transform: translateX(-100%); transform: translateX(-100%) }
+100% { -webkit-transform: translateX(0px); transform: translateX(0px) }
+}
+
+
+/************************************************/
 /* Buttons */
 
 .btn {
@@ -124,7 +166,7 @@ html, body, #root, .container {
   justify-content: center;
   align-items: center;
   margin-left: 2px;
-  padding: 10px;
+  padding: calc(var(--space-default) / 2);
   color: #fff;
   border: 1px var(--primary-color);;
   border-radius: 3px;
@@ -160,7 +202,7 @@ html, body, #root, .container {
 .btn--search {
   background: var(--primary-color);
   box-sizing: content-box;
-  width: 51px;
+  width: 50px;
   height: 45px;
   vertical-align: middle;
   padding: 1px 6px;

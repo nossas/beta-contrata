@@ -4,7 +4,7 @@ import Button from './Button';
 
 
 const Message = ({ onEditClick, onSaveClick, onDeleteClick, children, isActive }) => (
-  <li>
+  <li className='chat-list__item'>
     { children }
     <Button 
       onClick={ (onEditClick) } 

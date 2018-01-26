@@ -5,7 +5,7 @@ import Message from '../components/Message';
 import * as Actions from '../actions';
 
 const MessagesContainer = ({ messages, deleteMessage }) => (
-  <ul>
+  <ul className='chat-list'>
     { messages.map(msg =>
       <Message 
         key={ msg.id } 
