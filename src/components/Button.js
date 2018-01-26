@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Button = ({onClick, children, isActive, icon}) => (
+const Button = ({onClick, children, style, icon}) => (
 
   <button 
     onClick={ onClick }
-    style={{ disabled: !isActive ? true : false }}
+    className={style}
   >
     { children }
-    { icon ? <img className="btn__icon" src={icon}/> : null }
+    { icon }
   </button>
 
 );

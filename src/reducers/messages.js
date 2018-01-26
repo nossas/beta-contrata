@@ -11,21 +11,25 @@ const arrangeMessages = messages => {
 
 };                                                                                                                                        
 
-//const test =                                                                                                                                                    arrangeMessages(messages)
-//console.log(test.filter(msg => msg.id === 1))
-//console.log(Object.values(state))
-
 const INITIAL_STATE = {
   list: arrangeMessages(messages),
 };
 
 export default (state = INITIAL_STATE, action) => {
+  console.log(action)
   switch (action.type) {
     case 'DELETE_MESSAGE':
-    return {
-      ...state,
-      list: state.list.filter(msg => msg.id !== action.id)
-    }
+      return {
+        ...state,
+        list: state.list.filter(msg => msg.id !== action.payload)
+      }
+    
+    case 'SEARCH_MESSAGE':
+      console.log(action.payload)
+      return {
+        ...state,
+        list: state.list.filter(msg => msg.message.toLowerCase().match(action.payload))
+      }
     
     default:
       return state;
