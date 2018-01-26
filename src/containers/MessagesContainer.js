@@ -13,6 +13,7 @@ const MessagesContainer = ({ messages, deleteMessage }) => (
         onDeleteClick={ () => deleteMessage(msg.id) }
       >
         { msg.message }
+
       </Message>
     ) }
   </ul>
