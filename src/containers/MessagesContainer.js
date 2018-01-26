@@ -6,7 +6,6 @@ import Message from '../components/Message';
 
 const MessagesContainer = ({ messages }) => (
   <ul>
-    {console.log(messages)}
     {messages.map(msg =>
       <Message key={msg.id}>
         {msg.message}
