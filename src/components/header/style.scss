@@ -1,0 +1,14 @@
+.header-message {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 140px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Lobster Two', cursive;
+  color: #fff;
+  background: #f15b2a;
+  background: -webkit-linear-gradient(left,#f15b2a,#e80a89);
+  background: -o-linear-gradient(right,#f15b2a,#e80a89);
+  background: linear-gradient(to right,#f15b2a,#e80a89);
+}
