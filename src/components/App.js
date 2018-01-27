@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import MessagesContainer from '../containers/MessagesContainer'
 import Header from './Header'
 import MessageSearch from './MessageSearch'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <MessageSearch />
         <MessagesContainer />
+        <Footer />
       </div>
     );
   }

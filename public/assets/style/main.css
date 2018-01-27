@@ -5,7 +5,7 @@
 :root {
   --primary-color: #dc2c5d;
   --secondary-color: #56195b;
-  /* --dev-color: red; */
+  --dev-color: red; 
   --space-default: 20px;
 }
 
@@ -123,6 +123,7 @@ html, body, #root, .container {
   margin: 0 auto;
   padding: 0;
   border: 1px solid var(--dev-color);
+  margin-bottom: var(--space-default);
 }
 
 .chat-list__item {
@@ -181,7 +182,7 @@ html, body, #root, .container {
   box-sizing: content-box;
   margin-left: 2px;
   color: #fff;
-  border: 1px var(--primary-color);;
+  border: 1px var(--primary-color);
   border-radius: 3px;
   box-sizing: content-box;
   background: none;
@@ -219,7 +220,7 @@ html, body, #root, .container {
 .btn--search {
   background: var(--primary-color);
   width: 50px;
-  height: 45px;
+  height: 26px;
   vertical-align: middle;
   padding: 1px 6px;
   padding: calc(var(--space-default) / 2);
@@ -228,4 +229,85 @@ html, body, #root, .container {
 .btn__icon--search {
   width: 20px;
   height: 20px;
+}
+
+
+/************************************************/
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--primary-color);
+  min-height: 50px;  
+}
+
+.heart {
+  font-size: 12px;
+
+  width: 100%;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+@media(max-width: 560px) {
+  .heart {
+      height: 10%;
+  }
+}
+
+.heart__css {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+
+  animation: pulse .5s infinite alternate ease-in;
+
+  background-color: var(--secondary-color);
+}
+
+.heart__css:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  content: "";
+
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+.heart__css:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+
+  content: "";
+
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+@keyframes pulse {
+  from {transform: rotate(-135deg) scale(1);}
+  to   {transform: rotate(-135deg) scale(1.2);}
+}
+.heart__author {
+  text-decoration: none;
+
+  color: var(--secondary-color);
 }
