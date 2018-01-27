@@ -5,7 +5,7 @@
 :root {
   --primary-color: #dc2c5d;
   --secondary-color: #56195b;
-  /*--dev-color: red;*/
+  /* --dev-color: red; */
   --space-default: 20px;
 }
 
@@ -126,23 +126,30 @@ html, body, #root, .container {
 }
 
 .chat-list__item {
+  color: #494444;
   width: 100%;
-  max-width: 450px;
-  border: 1px solid var(--primary-color);
+  border: .5px solid #494444;
   background: #c59ca8;
-  margin: var(--space-default) 0;
-  margin-left: auto;
   padding: calc(var(--space-default) / 2);
   border-radius: 20px 20px 0 20px;
   list-style: none;
   animation: show .5s ease;
+  margin: var(--space-default) 0;
+  max-width: 300px;
 }
 
-.chat-list__item:nth-child(2n+0) {
-  background: #efe7e7;
-  border-radius: 0 20px 20px 20px;
-  margin: 0;
-  margin-right: auto;
+@media(min-width: 500px) {
+  .chat-list__item {
+    margin-left: auto;
+    max-width: 450px;
+  }
+
+  .chat-list__item:nth-child(2n+0) {
+    background: #efe7e7;
+    border-radius: 0 20px 20px 20px;
+    margin: 0;
+    margin-right: auto;
+  }
 }
 
 @-webkit-keyframes show {
@@ -155,6 +162,12 @@ html, body, #root, .container {
 100% { -webkit-transform: translateX(0px); transform: translateX(0px) }
 }
 
+.chat-list__item__buttons {
+  border: 1px solid var(--dev-color);
+  margin-top: var(--space-default);
+  width: 100%;
+}
+
 
 /************************************************/
 /* Buttons */
@@ -165,20 +178,22 @@ html, body, #root, .container {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  box-sizing: content-box;
   margin-left: 2px;
-  padding: calc(var(--space-default) / 2);
   color: #fff;
   border: 1px var(--primary-color);;
   border-radius: 3px;
+  box-sizing: content-box;
+  background: none;
 }
 
 .btn:hover {
     cursor: pointer;
-    background-image: linear-gradient(to bottom, transparent, var(--secondary-color));
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.1));
 }
 
 .btn:active {
-    background-image: linear-gradient(to bottom,var(--primary-color), var(--secondary-color));
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.1), rgba(0,0,0,.1));
 }
 
 .btn--inactive {
@@ -199,13 +214,15 @@ html, body, #root, .container {
     padding-left: 5px;
 }
 
+
+/* Buton Search */
 .btn--search {
   background: var(--primary-color);
-  box-sizing: content-box;
   width: 50px;
   height: 45px;
   vertical-align: middle;
   padding: 1px 6px;
+  padding: calc(var(--space-default) / 2);
 }
 
 .btn__icon--search {

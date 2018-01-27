@@ -20,7 +20,7 @@ let MessageSearch = ({dispatch}) => {
         />
 
         <Button style='btn btn--search' buttonType='submit' >
-          <img className='.btn__icon--search' src='./assets/icon/search.svg' alt='logo Beta a Robô' />
+          <img className='.btn__icon--search' src='./assets/icon/search.svg' alt='Search button' />
         </Button>
         
       </form>
