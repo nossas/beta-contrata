@@ -1,0 +1,42 @@
+.form-message {
+  padding: 3rem;  
+  width: 30rem;
+  border: 1px solid rgb(207, 207, 207);
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+ > label {
+    > input {
+       display: block;
+       width: 100%;
+       padding: 1rem;
+       border: none;
+       border: 1px solid #e80a89;
+       border-radius: .6rem;
+    }
+
+    > textarea {
+       margin-top: 1rem;
+       width: 100%;
+       border: 1px solid #e80a89;
+    }
+
+    > span {
+      display: flex;
+      color: #e80a89;
+      margin-bottom: 1rem;
+    }
+ }
+
+ > .btn {
+    display: block;
+    width: 10rem;
+    padding: 1rem;
+    background: #e80a89;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+ }
+ 
+}
