@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { saveMessage } from '../actions';
 import Button from '../components/Button';
 
-const MessageEditContainer = ({
+const MessageEdit = ({
   idMessage,
   chave,
   text,
   editing,
   isActive,
-  saveMessage
+  saveMessage,
+  dispatch
 }) => {
 
   let inputChave, inputMsg;
 
   const onSubmit = e => {
     e.preventDefault();
-    editing = {editing}
-    saveMessage(idMessage, inputChave.value, inputMsg.value, editing);
+    dispatch(saveMessage(idMessage, inputChave.value, inputMsg.value));
   };
 
   return (
@@ -41,11 +42,11 @@ const MessageEditContainer = ({
         />
       </div>
 
-      <Button buttonType='submit' style={isActive}>
-        Salvar
+      <Button buttonType='submit' style='btn btn--save'>
+        <img className='.btn__icon--search' src='./assets/icon/save.svg' alt='Edit button' />
       </Button>
     </form>
   );
 };
 
-export default connect()(MessageEditContainer);
+export default connect()(MessageEdit);

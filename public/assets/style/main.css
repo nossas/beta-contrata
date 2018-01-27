@@ -5,7 +5,7 @@
 :root {
   --primary-color: #dc2c5d;
   --secondary-color: #56195b;
-  --dev-color: red; 
+  /*--dev-color: red; */
   --space-default: 20px;
 }
 

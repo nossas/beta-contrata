@@ -2,19 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Message from '../components/Message';
+import MessageEdit from '../components/MessageEdit';
 import * as Actions from '../actions';
 
-const MessagesContainer = ({ messages, deleteMessage }) => (
-  <ul className='chat-list'>
-    { messages.map(msg =>
-      <Message 
-        key={ msg.id } 
-        onDeleteClick={ () => deleteMessage(msg.id) }
-      >
-        { msg.message }
+const MessagesContainer = ({ messages, deleteMessage, saveMessage }) => (
 
-      </Message>
-    ) }
+  <ul className='chat-list'>
+    { messages.map(msg => 
+        <Message 
+          key={ msg.id } 
+          onDeleteClick={ () => deleteMessage(msg.id) }
+        >
+          { msg.message }
+
+        </Message>
+    )}
+
   </ul>
 );
 

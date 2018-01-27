@@ -35,7 +35,16 @@ export default (state = INITIAL_STATE, action) => {
           return state;
         })
       };
- 
+
+      case 'SAVE_MESSAGE':
+      return {
+        ...state,
+        list: state.list.map(msg => 
+          msg.id === action.payload.idMessage)
+          ? [Object.assign({}, msg, {editing: !msg.editing}), ...msg]
+        : msg
+      };
+
     default:
       return state;
   }
