@@ -45,13 +45,23 @@ class App extends React.Component {
  
   listMessages = () => {
     const messages = this.props.messages.items;
+    const currentItem = this.props.messages.currentItem;
     return Object.keys(messages).map((key, index) => {
       return (
         <div key={index}>
-          <Card item={this.props.messages.items[key]}
-                id={key}
-                setCurrentMessage={this.setCurrentMessage}
-                removeMessage={this.removeMessage} />
+          {currentItem != key ? (
+            <Card item={this.props.messages.items[key]}
+            id={key}
+            setCurrentMessage={this.setCurrentMessage}
+            removeMessage={this.removeMessage} />
+          ) : null}
+  
+          {currentItem == key ? (
+            <MessageForm
+              message={messages[currentItem]}
+              id={currentItem}
+              handleSubmit={this.onEdit} />
+          ) : null}
         </div>
       );
     });
@@ -63,13 +73,9 @@ class App extends React.Component {
       <div className="container">
         <Header />
         <Search searchMessage={this.searchMessage} className="search-message" />
-        {this.listMessages()}
-        {currentItem 
-          ? <MessageForm
-              message={items[currentItem]}
-              id={currentItem}
-              handleSubmit={this.onEdit} />
-          : null}
+        <div className="content-message">
+          {this.listMessages()}
+        </div>  
       </div>
     );
   };

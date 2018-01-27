@@ -51,7 +51,7 @@ class MessageForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="form-message" onSubmit={this.onSubmit}>
         <input type="hidden"
                  ref={oldKey => { this.oldKey = oldKey; }}
                  value={this.props.id}
@@ -59,21 +59,20 @@ class MessageForm extends React.Component {
         <label>
           <input type="text"
                  ref={key => { this.key = key; }}
-                 onChange={(e) => {
-                  this.key.value = e.target.value.toUpperCase();
-                  this.onChange(e);
-                 }}
+                 onChange={this.onChange}
                  name="key" />
           <span>{this.state.errors.key}</span>
         </label>
         <label>
-          <input type="text"
-                 onChange={this.onChange}
-                 ref={msg => { this.message = msg; }}
-                 name="message" />
+          <textarea rows="6" 
+                    cols="30"  
+                    onChange={this.onChange}
+                    ref={msg => { this.message = msg; }}
+                    name="message">
+          </textarea>       
           <span>{this.state.errors.message}</span>
         </label>
-        <button type="submit">{'Editar'}</button>
+        <button type="submit" className="btn">{'Editar'}</button>
      </form>  
     );
   }
@@ -85,3 +84,13 @@ MessageForm.propTypes = {
 };
 
 export default MessageForm;
+
+/*
+
+<input type="text"
+                 onChange={this.onChange}
+                 ref={msg => { this.message = msg; }}
+                 name="message" />
+          <span>{this.state.errors.message}</span>
+
+*/

@@ -5,13 +5,21 @@ class Card extends React.Component {
   render() {
     return (
       <div className="card-message">
-        {this.props.item}
-        <a href="javascript:void(0)"
-          data-message_id={this.props.id}
-          onClick={this.props.setCurrentMessage}>Editar</a>
-        <a href="javascript:void(0)"
-          data-message_id={this.props.id}
-          onClick={this.props.removeMessage}>x</a>  
+        <div className="text">
+          {this.props.item}
+        </div>
+        <div className="actions">
+          <a href="javascript:void(0)"
+            data-message_id={this.props.id}
+            onClick={this.props.setCurrentMessage}>
+            <i className="fa fa-pencil icon" aria-hidden="true" />
+          </a>
+          <a href="javascript:void(0)"
+            data-message_id={this.props.id}
+            onClick={this.props.removeMessage}>
+            <i className="fa fa-trash icon" aria-hidden="true" />
+          </a> 
+        </div> 
       </div>
     );
   }

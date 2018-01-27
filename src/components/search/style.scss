@@ -10,45 +10,39 @@
 
   > .wrapper {
       position: relative;
-      width: 44rem;
 
     > .input {
       display: block;
-      padding: 14px;
+      border: 1px solid blue;
       width: 40rem;
       border-radius: 3rem;
+      padding-left: 3.8rem;
       border: none;
-      border: solid 1px #D3D3D3;
+      border: solid 1px #b8b8b8;
       outline: none;
-      color: #e80a89;
+      color: #9c9c9c;
+      height: 44px;
+      font-size: 14px;
     }
  
     > .icon {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 2px;
+      left: 4px;
       color: #fff;
       font-size: 2rem;
-      margin-left: .6rem;
-      color: #fff;
+      color: #ed563c;
       padding: 1rem;
       border-radius: 2rem;
       cursor: pointer;
     }
   }
-  
 }
 
 @media(max-width: 360px) { 
   .search-message {
-    > .wrapper {
-       width: 26rem;
-
-       > .input {
-          width: 22rem;
-          padding: 12px;
-       }
+    > .wrapper  .input {
+      width: 22rem;
     }
   }  
 }
-

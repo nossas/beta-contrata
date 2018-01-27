@@ -7,7 +7,8 @@ function Search({ searchMessage, className }) {
       <label className="wrapper">
         <input type="text"
                onChange={(e) => searchMessage(e.target.value)}
-               className='input'
+               className="input"
+               placeholder="pesquise um menssagem..."
                name="search" />      
         <i className="fa fa-search icon" aria-hidden="true" />      
       </label>
