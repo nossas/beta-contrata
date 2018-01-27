@@ -96,7 +96,6 @@ html, body, #root, .container {
   align-items: center;
 }
 
-
 .search__input {
   box-sizing: content-box;
   width: 100%;
@@ -107,7 +106,6 @@ html, body, #root, .container {
   font: 14px 'Open Sans', sans-serif;
   border-radius: 2px;
 }
-
 
 .search__erro--hide {
   display: none;
@@ -135,8 +133,13 @@ html, body, #root, .container {
   border-radius: 20px 20px 0 20px;
   list-style: none;
   animation: show .5s ease;
-  margin: var(--space-default) 0;
+  margin: var(--space-default) auto;
   max-width: 300px;
+}
+
+.chat-list__item:nth-child(2n+0) {
+  background: #efe7e7;
+  border-radius: 0 20px 20px 20px;
 }
 
 @media(min-width: 500px) {
@@ -282,7 +285,7 @@ html, body, #root, .container {
   width: 10px;
   height: 10px;
 
-  content: "";
+  content: '';
 
   border-radius: 50%;
   background-color: var(--secondary-color);
@@ -296,7 +299,7 @@ html, body, #root, .container {
   width: 10px;
   height: 10px;
 
-  content: "";
+  content: '';
 
   border-radius: 50%;
   background-color: var(--secondary-color);

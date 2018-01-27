@@ -1,4 +1,4 @@
-import messages from "../messages";
+import messages from '../messages';
  
 const arrangeMessages = messages => {
   const messageKey = Object.keys(messages);
@@ -16,13 +16,13 @@ const INITIAL_STATE = {
  
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "DELETE_MESSAGE":
+    case 'DELETE_MESSAGE':
       return {
         ...state,
         list: state.list.filter(msg => msg.id !== action.payload)
       };
  
-    case "SEARCH_MESSAGE":
+    case 'SEARCH_MESSAGE':
       console.log(action.payload);
       return {
         ...state,
@@ -32,7 +32,7 @@ export default (state = INITIAL_STATE, action) => {
               .toLowerCase()
               .match(action.payload.toLowerCase());
           }
-          return false;
+          return state;
         })
       };
  
